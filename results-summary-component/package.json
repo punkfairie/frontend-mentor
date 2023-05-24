@@ -8,7 +8,20 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+  "postcss": {
+    "plugins": {
+      "postcss-extend-rule": {},
+      "postcss-nesting": {},
+      "postcss-include-media": {
+        "phone": "375px",
+        "destop": "1440px"
+      }
+    }
+  },
   "devDependencies": {
+    "postcss-extend-rule": "^4.0.0",
+    "postcss-include-media": "^1.1.1",
+    "postcss-nesting": "^11.2.2",
     "vite": "^4.3.2"
   }
 }
