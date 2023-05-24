@@ -11,6 +11,7 @@
   "postcss": {
     "plugins": {
       "postcss-extend-rule": {},
+      "postcss-nested-ancestors": {},
       "postcss-nested": {},
       "postcss-include-media": {
         "phone": "375px",
@@ -22,6 +23,7 @@
     "postcss-extend-rule": "^4.0.0",
     "postcss-include-media": "^1.1.1",
     "postcss-nested": "^6.0.1",
+    "postcss-nested-ancestors": "^3.0.0",
     "vite": "^4.3.2"
   },
   "dependencies": {

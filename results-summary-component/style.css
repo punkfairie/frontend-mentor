@@ -8,9 +8,13 @@
 
 :root {
     --c-red: hsl(0, 100%, 67%);
+    --c-red-t: hsl(0, 100%, 67%, 0.1);
     --c-yellow: hsl(39, 100%, 56%);
+    --c-yellow-t: hsl(39, 100%, 56%, 0.1);
     --c-green: hsl(166, 100%, 37%);
+    --c-green-t: hsl(166, 100%, 37%, 0.1);
     --c-blue: hsl(234, 85%, 45%);
+    --c-blue-t: hsl(234, 85%, 45%, 0.1);
 
     --c-bg-main-start: hsl(252, 100%, 67%);
     --c-bg-main-end: hsl(241, 81%, 54%);
@@ -23,6 +27,7 @@
     --c-n-pale-blue: hsl(221, 100%, 96%);
     --c-n-lavender: hsl(241, 100%, 89%);
     --c-n-gray-blue: hsl(224, 30%, 27%);
+    --c-n-gray-blue-t: hsl(224, 30%, 27%, 0.5);
 
     --f-size: 16px;
     --f-family: 'Hanken Grotesk', serif;
@@ -41,6 +46,7 @@ body {
 
     &__title {
         font-size: calc(var(--f-size) + 2px);
+        font-weight: var(--f-bold);
 
         &--summary {
             @extend .ResultsCard__title;
@@ -50,6 +56,7 @@ body {
 
         &--detailed {
             @extend .ResultsCard__title;
+            margin-bottom: 1.5rem;
         }
     }
 }
@@ -87,5 +94,76 @@ body {
             font-size: calc(var(--f-size) + 8px);
             color: var(--c-n-white);
         }
+    }
+}
+
+.ResultsDetailed {
+    padding: 1.5rem 2rem;
+    color: var(--c-n-gray-blue);
+
+    &__category {
+        width: 100%;
+        margin: 1.3rem 0;
+    }
+}
+
+.CategoryScore {
+    display: flex;
+    padding: 1.25rem 1rem;
+    border-radius: 10px;
+
+    &__icon {
+        margin-right: .75rem;
+    }
+
+    &__score {
+        margin-right: .5rem;
+        margin-left: auto;
+        font-weight: var(--f-bold);
+        color: var(--c-n-gray-blue);
+    }
+
+    &__max {
+        font-weight: var(--f-bold);
+        color: var(--c-n-gray-blue-t);
+    }
+
+    &--reaction {
+        @extend .CategoryScore;
+        color: var(--c-red);
+        background-color: var(--c-red-t);
+    }
+
+    &--memory {
+        @extend .CategoryScore;
+        color: var(--c-yellow);
+        background-color: var(--c-yellow-t);
+    }
+
+    &--verbal {
+        @extend .CategoryScore;
+        color: var(--c-green);
+        background-color: var(--c-green-t);
+    }
+
+    &--visual {
+        @extend .CategoryScore;
+        color: var(--c-blue);
+        background-color: var(--c-blue-t);
+    }
+}
+
+.Button {
+    width: 100%;
+    padding: 1rem;
+    font-size: calc(var(--f-size) + 2px);
+    font-weight: var(--f-bold);
+    color: var(--c-n-white);
+    background-color: var(--c-n-gray-blue);
+    border: none;
+    border-radius: 30px;
+
+    &:hover {
+        background-image: linear-gradient(to bottom, var(--c-bg-main-start), var(--c-bg-main-end));
     }
 }
