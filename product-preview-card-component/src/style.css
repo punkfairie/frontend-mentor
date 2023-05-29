@@ -19,9 +19,18 @@
     font-size: 14px;
 }
 
-html, body, .wrapper {
+/* ----------------------------------------------------------------------------------- &base ---- */
+
+html {
     width: 100vw;
     height: 100vh;
+}
+
+body, .wrapper {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 body {
@@ -38,6 +47,12 @@ body {
     justify-content: center;
 }
 
+@media (min-width: 1000px) {
+    .wrapper {
+        height: 95%;
+    }
+}
+
 /* ---------------------------------------------------------------------------- &ProductCard ---- */
 
 .ProductCard {
@@ -49,19 +64,47 @@ body {
     border-radius: var(--ProductCard-borderRadius);
 }
 
+@media (min-width: 1000px) {
+    .ProductCard {
+        height: min-content;
+        width: 50%;
+        display: flex;
+    }
+}
+
 .ProductCard-picture {
     width: 100%;
     border-radius: var(--ProductCard-borderRadius) var(--ProductCard-borderRadius) 0 0;
+}
+
+@media (min-width: 1000px) {
+    .ProductCard-picture {
+        border-radius: var(--ProductCard-borderRadius) 0 0 var(--ProductCard-borderRadius);
+        height: 100%;
+    }
 }
 
 .ProductCard-body {
     padding: 1.25rem 1.75rem;
 }
 
+@media (min-width: 1000px) {
+    .ProductCard-body {
+        width: 80%;
+        padding: 2.5rem 2rem;
+    }
+}
+
 .ProductCard-category {
     text-transform: uppercase;
     letter-spacing: .3rem;
     margin-bottom: .5rem;
+}
+
+@media (min-width: 1000px) {
+    .ProductCard-category {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .ProductCard-title {
@@ -72,15 +115,33 @@ body {
     margin-bottom: 1rem;
 }
 
+@media (min-width: 1000px) {
+    .ProductCard-title {
+        margin-bottom: 1.25rem;
+    }
+}
+
 .ProductCard-description {
     letter-spacing: .025rem;
     line-height: 1.75rem;
+}
+
+@media (min-width: 1000px) {
+    .ProductCard-description {
+        margin-bottom: 2rem;
+    }
 }
 
 .ProductCard-priceContainer {
     width: 100%;
     display: flex;
     align-items: center;
+}
+
+@media (min-width: 1000px) {
+    .ProductCard-priceContainer {
+        margin-bottom: 1.5rem;
+    }
 }
 
 .ProductCard-price {
