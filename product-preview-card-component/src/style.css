@@ -59,4 +59,13 @@ body {
 .ProductCard-category {
     text-transform: uppercase;
     letter-spacing: .3rem;
+    margin-bottom: .5rem;
+}
+
+.ProductCard-title {
+    font-family: var(--t-family-display);
+    font-size: 2.25rem;
+    color: black;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
