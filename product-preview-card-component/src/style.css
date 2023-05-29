@@ -1,11 +1,11 @@
 /* ----------------------------------------------------------------------------------- &root ---- */
 
 :root {
-    --c-dark-cyan: hsl(158, 36%, 37%);
+    --c-darkCyan: hsl(158, 36%, 37%);
     --c-cream: hsl(30, 38%, 92%);
 
-    --c-dark-blue: hsl(212, 21%, 14%);
-    --c-gray-blue: hsl(228, 12%, 48%);
+    --c-darkBlue: hsl(212, 21%, 14%);
+    --c-grayBlue: hsl(228, 12%, 48%);
 
     --t-family-body: 'Montserrat';
     --t-weight-body: 500;
@@ -27,6 +27,7 @@ body {
     background-color: var(--c-cream);
     font-family: var(--t-family-body);
     font-weight: var(--t-weight-body);
+    color: hsla(0, 0%, 0%, 60%);
 }
 
 .wrapper {
@@ -38,15 +39,24 @@ body {
 /* ---------------------------------------------------------------------------- &ProductCard ---- */
 
 .ProductCard {
-    --border-radius: 10px;
+    --ProductCard-borderRadius: 10px;
 
     height: 90%;
     width: 90%;
     background-color: white;
-    border-radius: var(--border-radius);
+    border-radius: var(--ProductCard-borderRadius);
 }
 
 .ProductCard-picture {
     width: 100%;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    border-radius: var(--ProductCard-borderRadius) var(--ProductCard-borderRadius) 0 0;
+}
+
+.ProductCard-body {
+    padding: 1.25rem 1.75rem;
+}
+
+.ProductCard-category {
+    text-transform: uppercase;
+    letter-spacing: .3rem;
 }
