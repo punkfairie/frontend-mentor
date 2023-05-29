@@ -2,6 +2,7 @@
 
 :root {
     --c-darkCyan: hsl(158, 36%, 37%);
+    --c-darkerCyan: #193e30;
     --c-cream: hsl(30, 38%, 92%);
 
     --c-darkBlue: hsl(212, 21%, 14%);
@@ -28,7 +29,7 @@ body {
     background-color: var(--c-cream);
     font-family: var(--t-family-body);
     font-weight: var(--t-weight-body);
-    color: hsla(0, 0%, 0%, 60%);
+    color: var(--c-grayBlue);
 }
 
 .wrapper {
@@ -66,7 +67,7 @@ body {
 .ProductCard-title {
     font-family: var(--t-family-display);
     font-size: var(--t-size-display);
-    color: black;
+    color: var(--c-darkBlue);
     margin-top: 0;
     margin-bottom: 1rem;
 }
@@ -91,4 +92,22 @@ body {
 .ProductCard-price--discounted {
     text-decoration: line-through;
     margin-left: 1.25rem;
+}
+
+.ProductCard-addToCart {
+    width: 100%;
+    height: 3rem;
+    margin-top: 1rem;
+    border: 0;
+    background-color: var(--c-darkCyan);
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: .75rem;
+}
+
+.ProductCard-addToCart:hover {
+    background-color: var(--c-darkerCyan);
 }
