@@ -69,3 +69,8 @@ body {
     margin-top: 0;
     margin-bottom: 1rem;
 }
+
+.ProductCard-description {
+    letter-spacing: .025rem;
+    line-height: 1.75rem;
+}
