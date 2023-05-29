@@ -11,7 +11,7 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-      .attribution { font-size: 11px; text-align: center; }
+      .attribution { font-size: 11px; text-align: center; margin-bottom: 10px; }
 
       .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -26,34 +26,42 @@
 </head>
 <body>
 
-<main class="ProductCard">
-  <picture class="ProductCard-picture">
-    <source media="(max-width: 999px)" srcset="images/image-product-mobile.jpg">
-    <source media="(min-width: 1000px)" srcset="images/image-product-desktop.jpg">
-    <img src="images/image-product-desktop.jpg" alt="Gabrielle Essence perfume bottle">
-  </picture>
+<div class="wrapper">
+  <main class="ProductCard">
+    <picture>
+      <source media="(max-width: 999px)" srcset="images/image-product-mobile.jpg">
+      <source media="(min-width: 1000px)" srcset="images/image-product-desktop.jpg">
+      <img
+        src="images/image-product-desktop.jpg"
+        alt="Gabrielle Essence perfume bottle"
+        class="ProductCard-picture"
+      >
+    </picture>
 
-  <div class="ProductCard-category">Perfume</div>
+    <div class="ProductCard-category">Perfume</div>
 
-  <h1 class="ProductCard-title">Gabrielle Essence Eau De Parfum</h1>
+    <h1 class="ProductCard-title">Gabrielle Essence Eau De Parfum</h1>
 
-  <p class="ProductCard-description">
-    A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for
-    the House of CHANEL.
-  </p>
+    <p class="ProductCard-description">
+      A floral, solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for
+      the House of CHANEL.
+    </p>
 
-  <div class="ProductCard-priceContainer">
-    <span class="ProductCard-price">$149.99</span>
-    <span class="ProductCard-price--discounted">$169.99</span>
-  </div>
+    <div class="ProductCard-priceContainer">
+      <span class="ProductCard-price">$149.99</span>
+      <span class="ProductCard-price--discounted">$169.99</span>
+    </div>
 
-  <button class="ProductCard-addToCart">Add to Cart</button>
-</main>
+    <button class="ProductCard-addToCart">Add to Cart</button>
+  </main>
+</div>
 
 <div class="attribution">
   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend
                                                                                      Mentor</a>.
   Coded by <a href="https://punkfairie.net">Marley Rae</a>.
 </div>
+
+<script src="./src/main.ts" type="module"></script>
 </body>
 </html>
