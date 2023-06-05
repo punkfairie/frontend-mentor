@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/assets/favicon-32x32.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Frontend Mentor | Interactive rating component</title>
 </head>
@@ -10,25 +10,43 @@
 <div id="app">
     <!-- Rating state start -->
 
-    How did we do?
+    <div id="rating" class="Rating Card" v-if="!submitted">
+        <img src="./src/assets/icon-star.svg" alt="Star icon" class="Rating-icon">
 
-    Please let us know how we did with your support request. All feedback is appreciated
-    to help us improve our offering!
+        <h1 class="Card-title">How did we do?</h1>
 
-    1 2 3 4 5
+        <p class="Card-text">
+            Please let us know how we did with your support request. All feedback is appreciated
+            to help us improve our offering!
+        </p>
 
-    Submit
+        <div class="Rating-numbers">
+            <button class="Rating-number" @click="rating = 1">1</button>
+            <button class="Rating-number" @click="rating = 2">2</button>
+            <button class="Rating-number" @click="rating = 3">3</button>
+            <button class="Rating-number" @click="rating = 4">4</button>
+            <button class="Rating-number" @click="rating = 5">5</button>
+        </div>
+
+        <button class="Card-button" @click="submitted = true">Submit</button>
+    </div>
 
     <!-- Rating state end -->
 
     <!-- Thank you state start -->
 
-    You selected <!-- Add rating here --> out of 5
+    <div id="thankYou" class="ThankYou Card" v-else>
+        <img src="./src/assets/illustration-thank-you.svg" alt="illustration" class="ThankYou-illustration">
 
-    Thank you!
+        <div class="ThankYou-userInput">You selected {{ rating }} out of 5</div>
 
-    We appreciate you taking the time to give a rating. If you ever need more support,
-    don’t hesitate to get in touch!
+        <h1 class="Card-title">Thank you!</h1>
+
+        <p class="Card-text">
+            We appreciate you taking the time to give a rating. If you ever need more support,
+            don’t hesitate to get in touch!
+        </p>
+    </div>
 
     <!-- Thank you state end -->
 
