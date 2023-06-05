@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectResources">
+    <resource url="https://fonts.bunny.net/css?family=overpass:400,700" location="$PROJECT_DIR$" />
+  </component>
+</project>
